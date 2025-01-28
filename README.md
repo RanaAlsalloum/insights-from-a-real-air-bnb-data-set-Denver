@@ -33,4 +33,10 @@ Multiplying by 100 converts the proportions into percentages
  availability_percentage = calendar['available'].value_counts(normalize=True) * 100
 availability_percentage
 ```
-
+# 3. Let`s Count the busiest day! 🚩
+Hint: We will be counting the most unavailable days (given by f)
+```diff
+busiest_dates = calendar[calendar['available'] == 'f']['date'].value_counts()
+print("Busiest Dates:")
+print(busiest_dates.head())
+```
