@@ -17,3 +17,6 @@ Let`s dive into exciting insights!
 ```diff
 calendar.available.value_counts()
 ```
+<img width="233" alt="Screenshot 1446-07-28 at 9 39 39 AM" src="https://github.com/user-attachments/assets/6fbe5051-2a6d-49e1-add5-b26567a049bd" />
+
+f (false) means not available, t(true) means available.
