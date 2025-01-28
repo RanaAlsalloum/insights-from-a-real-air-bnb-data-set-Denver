@@ -163,3 +163,15 @@ m
 ```
 <img width="1045" alt="Screenshot 1446-07-28 at 10 21 49 AM" src="https://github.com/user-attachments/assets/0fe29b0c-2f81-435b-82b5-e78113c6517c" />
 
+# 🚨 How do I find location for my city?
+* Type your city name on google maps
+* Click on What`s here?
+<img width="1312" alt="Screenshot 1446-07-28 at 10 49 52 AM" src="https://github.com/user-attachments/assets/cdf17ff2-8308-42b8-bedb-311959036207" />
+
+* You will find latitude and longitude at the bottom of screen
+  
+<img width="359" alt="Screenshot 1446-07-28 at 10 53 14 AM" src="https://github.com/user-attachments/assets/af452212-5938-419d-b00d-38690d7c5ce6" />
+
+
+
+
