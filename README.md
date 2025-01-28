@@ -67,3 +67,10 @@ plt.show()
 import pandas as pd
 listings = pd.read_csv('listings.csv')
 ```
+<img width="1043" alt="Screenshot 1446-07-28 at 9 56 53 AM" src="https://github.com/user-attachments/assets/63541d79-4b99-42e8-ab0c-b333f5f6f998" />
+
+```python
+listings.columns
+```
+<img width="558" alt="Screenshot 1446-07-28 at 9 59 41 AM" src="https://github.com/user-attachments/assets/497ca1e4-98ff-4609-85e5-17049458f485" />
+
