@@ -74,3 +74,54 @@ listings.columns
 ```
 <img width="558" alt="Screenshot 1446-07-28 at 9 59 41 AM" src="https://github.com/user-attachments/assets/497ca1e4-98ff-4609-85e5-17049458f485" />
 
+# ✅ Room type and price is given seperately
+
+Let`s Combine and visualize them
+```python
+import matplotlib.pyplot as plt
+price_by_room = listings.groupby('room_type')['price'].mean()
+print(price_by_room)
+
+# Plot price by room type
+price_by_room.plot(kind='bar', color='cyan')
+plt.title('Average Price by Room Type')
+plt.ylabel('Average Price')
+plt.xlabel('Room Type')
+
+plt.show()
+```
+<img width="758" alt="Screenshot 1446-07-28 at 10 02 41 AM" src="https://github.com/user-attachments/assets/2a831657-f09d-48f1-b5a2-19921b28c5c0" />
+
+# ✅ Which are the top 10 neighborhoods with the most listings?
+
+```python
+neighborhood_counts = listings['neighbourhood'].value_counts().head(10)
+print("Top 10 Neighborhoods by Listings:")
+print(neighborhood_counts)
+
+# Plot neighborhoods with most listings
+neighborhood_counts.plot(kind='bar', color='lightcoral')
+plt.title('Top 10 Neighborhoods by Listings')
+plt.ylabel('Number of Listings')
+plt.xlabel('Neighborhood')
+plt.xticks(rotation=90)
+plt.show()
+```
+<img width="703" alt="Screenshot 1446-07-28 at 10 05 05 AM" src="https://github.com/user-attachments/assets/80c6cb2a-2465-4e48-9d87-fbba95261c16" />
+
+# ✅ Geographical Distribution of Listings (Price Colored)
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+```python
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=listings, x='longitude', y='latitude', hue='price', palette='viridis', size='price', sizes=(10, 200))
+plt.title('Geographical Distribution of Listings (Price Colored)')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.show()
+```
+<img width="982" alt="Screenshot 1446-07-28 at 10 08 11 AM" src="https://github.com/user-attachments/assets/dff01783-da01-4b65-bb56-94f913f9979f" />
+
