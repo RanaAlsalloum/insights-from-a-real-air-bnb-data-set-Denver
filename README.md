@@ -125,3 +125,39 @@ plt.show()
 ```
 <img width="982" alt="Screenshot 1446-07-28 at 10 08 11 AM" src="https://github.com/user-attachments/assets/dff01783-da01-4b65-bb56-94f913f9979f" />
 
+# Let us see the listings on a real map
+
+* High Density: The areas that appear in red or yellow (the "hot" colors) indicate higher density or concentration of listings. This means there are more listings in these areas.
+Popular Locations: These regions might be more popular or in high demand. It could be near tourist attractions, popular neighborhoods, or central areas in Denver where people tend to stay more often.
+Colder Areas (Green/Blue):
+
+* Low Density: Areas with blue or green (the "cold" colors) indicate a lower concentration of listings. These regions have fewer listings available.
+Less Popular Locations: These areas might be less popular or further from key attractions. If you're looking at pricing or other factors, lower density could imply less competition in these regions, which might indicate more affordable areas or less tourist traffic.
+Density Patterns:
+
+* Clustered Areas: If you notice clusters of heatmap intensity, they represent hotspots. These might correspond to high-traffic areas like downtown Denver, popular neighborhoods, or close to major attractions like parks or sports venues.
+Spread-Out Listings: If the heatmap shows a more uniform distribution, it could suggest that listings are more evenly spread across the region, which may reflect a more balanced demand for rentals across different areas of Denver.
+
+```python
+import folium
+from folium.plugins import HeatMap
+import pandas as pd
+
+
+Denver_data = listings[['latitude', 'longitude', 'price']]  # Example, you may add more columns
+
+# Create a base map centered around Denver
+m = folium.Map(location=[39.7392, -104.9903], zoom_start=12)
+
+# Prepare the data for the heatmap
+heat_data = [[row['latitude'], row['longitude']] for index, row in Denver_data.iterrows()]
+
+# Add the heatmap to the map
+HeatMap(heat_data).add_to(m)
+
+# Save the map as an HTML file to view in a browser
+m.save('denver_heatmap.html')
+
+# If you're using Jupyter Notebook, you can display the map directly in the notebook:
+m
+```
