@@ -20,3 +20,17 @@ calendar.available.value_counts()
 <img width="233" alt="Screenshot 1446-07-28 at 9 39 39 AM" src="https://github.com/user-attachments/assets/6fbe5051-2a6d-49e1-add5-b26567a049bd" />
 
 f (false) means not available, t(true) means available.
+
+# 2. Purpose: Calculates the percentage of available (t) and unavailable (f) dates.
+
+Explanation:
+
+value_counts(normalize=True) gives proportions.
+
+Multiplying by 100 converts the proportions into percentages
+
+```diff
+ availability_percentage = calendar['available'].value_counts(normalize=True) * 100
+availability_percentage
+```
+
