@@ -125,6 +125,56 @@ plt.show()
 ```
 <img width="982" alt="Screenshot 1446-07-28 at 10 08 11 AM" src="https://github.com/user-attachments/assets/dff01783-da01-4b65-bb56-94f913f9979f" />
 
+# What is the average price per neighborhood?
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the listings dataset
+listings = pd.read_csv('listings.csv')
+
+# Group by neighborhood and calculate the average price
+avg_price_neighborhood = listings.groupby('neighbourhood')['price'].mean()
+
+# Plot the results
+avg_price_neighborhood.sort_values(ascending=False).head(10).plot(kind='bar', color='skyblue')
+plt.title('Top 10 Neighborhoods with the Highest Average Price')
+plt.xlabel('Neighborhood')
+plt.ylabel('Average Price ($)')
+plt.xticks(rotation=45)
+plt.show()
+```
+<img width="693" alt="Screenshot 1446-07-28 at 11 04 15 AM" src="https://github.com/user-attachments/assets/56217092-2744-40ba-b5d5-b9627f92e37b" />
+
+# What is the distribution of listing availability (available vs. unavailable) over time?
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the calendar dataset
+calendar = pd.read_csv('calendar.csv')
+
+# Convert the 'date' column to datetime format
+calendar['date'] = pd.to_datetime(calendar['date'])
+
+# Group by month and availability status
+monthly_availability = calendar.groupby([calendar['date'].dt.to_period('M'), 'available']).size().unstack()
+
+# Plot the results
+monthly_availability.plot(kind='bar', stacked=True)
+plt.title('Listing Availability Over Time')
+plt.xlabel('Month')
+plt.ylabel('Number of Listings')
+plt.xticks(rotation=45)
+plt.show()
+```
+<img width="739" alt="Screenshot 1446-07-28 at 11 07 00 AM" src="https://github.com/user-attachments/assets/db668f9a-6201-48b0-b84e-5031fdc16b42" />
+
+
+
+
+
 # Let us see the listings on a real map
 
 * High Density: The areas that appear in red or yellow (the "hot" colors) indicate higher density or concentration of listings. This means there are more listings in these areas.
