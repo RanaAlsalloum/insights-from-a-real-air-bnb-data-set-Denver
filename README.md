@@ -161,3 +161,5 @@ m.save('denver_heatmap.html')
 # If you're using Jupyter Notebook, you can display the map directly in the notebook:
 m
 ```
+<img width="1045" alt="Screenshot 1446-07-28 at 10 21 49 AM" src="https://github.com/user-attachments/assets/0fe29b0c-2f81-435b-82b5-e78113c6517c" />
+
