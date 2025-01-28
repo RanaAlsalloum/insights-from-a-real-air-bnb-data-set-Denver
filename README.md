@@ -40,3 +40,14 @@ busiest_dates = calendar[calendar['available'] == 'f']['date'].value_counts()
 print("Busiest Dates:")
 print(busiest_dates.head())
 ```
+# 4. Plot a bar graph to show availability percentage
+```diff
+import matplotlib.pyplot as plt
+availability_percentage.plot(kind='bar', color=['green', 'red'])
+plt.title('Availability Percentages')
+plt.ylabel('Percentage')
+plt.xlabel('Available (t/f)')
+plt.show()
+```
+<img width="724" alt="Screenshot 1446-07-28 at 9 48 04 AM" src="https://github.com/user-attachments/assets/2ac22fa8-33ab-4d10-9f40-6af8e5cb92e5" />
+
