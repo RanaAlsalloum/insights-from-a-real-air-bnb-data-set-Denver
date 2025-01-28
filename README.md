@@ -51,3 +51,14 @@ plt.show()
 ```
 <img width="724" alt="Screenshot 1446-07-28 at 9 48 04 AM" src="https://github.com/user-attachments/assets/2ac22fa8-33ab-4d10-9f40-6af8e5cb92e5" />
 
+# 5. Plot the busiest day
+```diff
+busiest_dates.head(10).plot(kind='bar', color='orange')
+plt.title('Top 10 Busiest Dates')
+plt.ylabel('Number of Listings Unavailable')
+plt.xlabel('Date')
+plt.show()
+```
+<img width="788" alt="Screenshot 1446-07-28 at 9 50 09 AM" src="https://github.com/user-attachments/assets/cd7ab55f-82d7-467e-8921-97d3ff075eb2" />
+
+
